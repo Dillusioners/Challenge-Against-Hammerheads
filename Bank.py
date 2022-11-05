@@ -2,6 +2,7 @@ import random
 import os
 import json
 
+#Registering the user
 def register():
     name = input("Please enter your name: ")
     age = int(input("Please enter your age: "))
@@ -25,6 +26,7 @@ def register():
         }
         o.write(json.dumps(temp))
 
+#logging the user in
 def login():
     id = input("Please enter your ID: ")
     filename = "ids/" + id + ".json"
@@ -74,6 +76,7 @@ def deposit(amount, isLoggedIn, logged_id):
         o.truncate(0)
         o.write(json.dumps(temp))
 
+# The main function
 def main():
     isLoggedIn = False
     logged_id = ""
@@ -101,5 +104,6 @@ def main():
             amount = int(input("Please enter the amount you want to deposit: "))
             deposit(amount, isLoggedIn, logged_id)
 
+#Running App
 if __name__ == '__main__':
     main()
