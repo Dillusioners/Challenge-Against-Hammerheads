@@ -1,3 +1,7 @@
+#Author - Dynamax
+#Team - DIllusioners
+#Word - Bank
+#Info simple bank simulator
 import random
 import os
 import json
